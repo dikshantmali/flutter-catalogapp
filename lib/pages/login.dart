@@ -1,32 +1,63 @@
-import 'dart:ui';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Login Page",
-        ),
-        backgroundColor: Colors.green,
-      ),
-      body: Center(
-        child: Container(
-          child: Center(
-            child: Text(
-              "Login Page",
-              style: TextStyle(
-                color: Colors.blue,
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-              ),
-              textScaleFactor: 2.0,
-            ),
+    return Material(
+      color: Colors.white,
+      child: Column(
+        children: [
+          // AppBar(
+          //     title: Text(
+          //       "Login Page",
+          //       style: TextStyle(color: Colors.deepPurpleAccent),
+          //     ),
+          //     backgroundColor: Colors.white),
+          Image.asset(
+            "assets/images/login.png",
           ),
-        ),
+          SizedBox(
+            height: 10,
+          ),
+          Text(
+            "Login Page",
+            style: TextStyle(
+                fontSize: 25, fontWeight: FontWeight.bold, color: Colors.blue),
+          ),
+
+          SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding:
+                const EdgeInsets.symmetric(vertical: 12.0, horizontal: 32.0),
+            child: Column(
+              children: [
+                TextFormField(
+                  decoration: InputDecoration(
+                      hintText: "Enter user name", labelText: "Username"),
+                ),
+                TextFormField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                      hintText: "Enter password", labelText: "Password"),
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                ElevatedButton(
+                    onPressed: () {
+                      print("disdsadkj");
+                    },
+                    style: ButtonStyle(),
+                    child: Text(
+                      "Login",
+                    )),
+              ],
+            ),
+          )
+        ],
       ),
     );
   }
