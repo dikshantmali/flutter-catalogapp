@@ -8,6 +8,7 @@ class Home extends StatelessWidget {
         title: Text(
           "Catalog App",
         ),
+        backgroundColor: Colors.green,
       ),
       body: Center(
         child: Container(
